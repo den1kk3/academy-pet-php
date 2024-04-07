@@ -13,7 +13,7 @@
 
 <body>
     <?php include "./components/headerCpmponent.php"; ?>
-
+    <!-- idgaf -->
     <main class="container">
         <form method="post">
             <?php
@@ -35,7 +35,7 @@
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $totalCost = 0;
                 for ($i = 0; $i < count($products); $i++) {
-                    $quaontity = isset($_POST[$products[$i]['name']]) ? (int)$_POST[$products[$i]['name']] : 0;
+                    $quaontity = isset($_POST[$products[$i]['name']]) ? (int) $_POST[$products[$i]['name']] : 0;
                     $totalCost += $products[$i]['price'] * $quaontity;
                 }
 
